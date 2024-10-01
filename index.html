@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zach's Weather App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<header class="header">
+  <h4 class="header__title">Zach's
+    Weather
+    App</h4>
+  <button class="header__btn">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</header>
+<main class="main">
+<div class="main__container">
+
+  <section class="main__search">
+
+    <div class="main__form--container">
+      <h3 class="main__form--title">Around
+        <span id="location-name">Your
+          Town</span>
+        <span id="state"></span></h3>
+      <form class="main__form">
+        <div class="main__form--group">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="main__form--input"
+               placeholder="Search  by zipcode"
+               minlength="5"
+               maxlength="5"
+               type="text" name="zip"
+               id="zipcode">
+        <button class="main__form--btn"
+                type="submit" id="input-btn">Get
+        Weather</button>
+        </div>
+      </form>
+    </div>
+  </section>
+<div class="loader" id="loader">
+  <span class="loader__spinner"></span>
+</div>
+
+  <section class="main__weather"
+           id="weather-container">
+    <div class="main__weather--container">
+      <div class="main__weather--info">
+        <div class="main__forecast">
+
+        <h2 class="main__forecast--temp"
+        ><span id="low-temp"></span>
+          &deg;
+          F</h2>
+        <span>-</span> <h2
+                class="main__forecast--temp"
+        ><span id="high-temp"></span>&deg;
+          F</h2>
+        </div>
+        <div class="main__forecast--icon">
+<!--          <i class="fa-solid fa-sun"></i>-->
+        <img
+             id="weather-icon"
+             src="https://developer.accuweather.com/sites/default/files/01-s.png" alt="weather icon" />
+        </div>
+      </div>
+      <hr>
+      <div class="main__description">
+        <p
+                class="main__description--text"
+        id="description">
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="footer" id="footer">
+
+  <div class="footer__btns">
+    <button class="footer__btn"
+            id="footer-close">Close</button>
+  <button class="footer__btn"
+          id="footer-save">Save
+    <span id="footerZip"></span>?</button>
+
+  </div>
+</footer>
+
+  <script src="js/app.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
